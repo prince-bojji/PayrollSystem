@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="759.0" style="-fx-background-color: #c2ffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ComputeSalaryController">
+   <children>
+      <AnchorPane layoutY="141.0" prefHeight="9.0" prefWidth="759.0" style="-fx-background-color: #228B22;" />
+      <ImageView fitHeight="112.0" fitWidth="121.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/payroll_icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="166.0" layoutY="22.0" prefHeight="97.0" prefWidth="528.0" text="Payroll System" textAlignment="CENTER" textFill="FORESTGREEN">
+         <font>
+            <Font name="Bell MT" size="82.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="150.0" prefHeight="408.0" prefWidth="214.0" style="-fx-background-color: #9fff9f;">
+         <children>
+            <Button layoutX="20.0" layoutY="30.0" mnemonicParsing="false" onAction="#switchToAddEmployee" prefHeight="48.0" prefWidth="175.0" style="-fx-background-color: #ffffff;" text="Add Employee" textFill="FORESTGREEN">
+               <font>
+                  <Font name="Bell MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="20.0" layoutY="100.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="175.0" style="-fx-background-color: #ffffff;" text="Compute Salary" textFill="FORESTGREEN">
+               <font>
+                  <Font name="Bell MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="23.0" layoutY="315.0" mnemonicParsing="false" onAction="#exit" prefHeight="48.0" prefWidth="169.0" style="-fx-background-color: #ffffff;" text="Exit" textFill="FORESTGREEN">
+               <font>
+                  <Font name="Bell MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="23.0" layoutY="169.0" mnemonicParsing="false" onAction="#switchToPayment" prefHeight="48.0" prefWidth="169.0" style="-fx-background-color: #ffffff;" text="Payment" textFill="FORESTGREEN">
+               <font>
+                  <Font name="Bell MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="23.0" layoutY="242.0" mnemonicParsing="false" onAction="#switchToSalaryReport" prefHeight="48.0" prefWidth="169.0" style="-fx-background-color: #ffffff;" text="Salary Report" textFill="FORESTGREEN">
+               <font>
+                  <Font name="Bell MT Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtEmpID" layoutX="382.0" layoutY="163.0" prefHeight="34.0" prefWidth="175.0" promptText="Employee ID">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="245.0" layoutY="169.0" text="Employee ID:">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="245.0" layoutY="219.0" text="Hourly Rate:">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="609.0" layoutY="449.0" mnemonicParsing="false" onAction="#ok" prefHeight="48.0" prefWidth="101.0" style="-fx-background-color: #9fff9f;" text="OK">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="245.0" layoutY="268.0" text="Absent (total days):">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="365.0" text="Late (total hours):">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="515.0" text="Salary Amount:">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="410.0" text="Payroll Type:">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="252.0" layoutY="462.0" text="Payroll Date:">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHourlyRate" layoutX="382.0" layoutY="213.0" prefHeight="34.0" prefWidth="175.0" promptText="Hourly Rate">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtOvertime" layoutX="437.0" layoutY="309.0" prefHeight="34.0" prefWidth="192.0" promptText="Overtime (total hours)">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtLate" layoutX="437.0" layoutY="359.0" prefHeight="34.0" prefWidth="192.0" promptText="Late (total hours)">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPayrollType" layoutX="382.0" layoutY="404.0" prefHeight="34.0" prefWidth="175.0" promptText="Payroll Type">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPayrollDate" layoutX="382.0" layoutY="456.0" prefHeight="34.0" prefWidth="175.0" promptText="Payroll Date">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAmount" editable="false" layoutX="382.0" layoutY="509.0" prefHeight="34.0" prefWidth="175.0" promptText="Salary Amount">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAbsent" layoutX="437.0" layoutY="262.0" prefHeight="34.0" prefWidth="192.0" promptText="Absent (total days)">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="245.0" layoutY="315.0" text="Overtime (total hours):">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
