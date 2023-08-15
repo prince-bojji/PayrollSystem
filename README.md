@@ -1,4 +1,4 @@
-# PayrollSystem
+# Payroll System
 
 ![Payroll System](./src/images/ss.png)
 
